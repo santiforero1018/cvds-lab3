@@ -3,8 +3,7 @@
 - **Santiago Forero Yate**
 - **Juan Sebastian Cepeda Saray**
 
-> Ejercicios clases de Equivalencias (Aero Descuentos)
-> (Tener presente que cada bloque es la respuesta a un punto)
+> Ejercicios clases de Equivalencias (Aero Descuentos, Tener presente que cada bloque es la respuesta a un punto)
 >
 >>  * Si la edad es menor a 5 se lanzaría la excepción (ya que la edad mínima para viajar en avión es de 5 años)
 >>  * Si la tarifa base es menor o igual a 0 
