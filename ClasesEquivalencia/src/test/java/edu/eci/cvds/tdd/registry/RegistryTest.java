@@ -21,4 +21,29 @@ public class RegistryTest {
         Assert.assertEquals(RegisterResult.INVALID_AGE, result);  
     }
 
+    @Test
+    public void isDead (){
+        Gender gender = Gender.MALE;
+        Person person = new Person("NOMBRE x",  15, 56, gender, false);
+        RegisterResult result = registry.registerVoter(person);
+        Assert.assertEquals(RegisterResult.DEAD, result);  
+    }
+
+    @Test
+    public void isUnderAge (){
+        Gender gender = Gender.MALE;
+        Person person = new Person("Dany",  1018, 13, gender, true);
+        RegisterResult result = registry.registerVoter(person);
+        Assert.assertEquals(RegisterResult.UNDERAGE, result);  
+    }
+
+    @Test
+    public void isDuplicade (){
+        Gender gender = Gender.MALE;
+        Person person = new Person("andrea",  121, 45, gender, true);
+        registry.registerVoter(person);
+        RegisterResult result = registry.registerVoter(person);
+        Assert.assertEquals(RegisterResult.DUPLICATED, result);  
+    }
+   
 }
